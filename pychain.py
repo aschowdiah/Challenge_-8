@@ -52,7 +52,7 @@ import hashlib
 class Record:
     sender: str
     reciever: str
-    amount: float
+    amount: str
 
 ################################################################################
 # Step 2:
@@ -172,14 +172,14 @@ input_data = st.text_input("Block Data")
 
 # @TODO:
 # Add an input area where you can get a value for `sender` from the user.
-sender = st.text_input("Input Sender Information")
+sender = st.text_input("Sender")
 # @TODO:
 # Add an input area where you can get a value for `receiver` from the user.
-receiver = st.text_input("Input Rreceiver Information")
+receiver = st.text_input("Receiver")
 
 # @TODO:
 # Add an input area where you can get a value for `amount` from the user.
-amount = st.text_input("Input Amount Information")
+amount = st.text_input("Amount")
 
 if st.button("Add Block"):
     prev_block = pychain.chain[-1]
